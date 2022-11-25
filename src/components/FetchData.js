@@ -1,6 +1,12 @@
 import React, { useEffect } from "react";
+import { useContext } from "react";
+import { MovieContext } from "./Context";
 
 const FetchData = () => {
+
+const {state, dispatch} = useContext(MovieContext)
+
+
   useEffect(() => {
     const getData = async () => {
       const response = await fetch(
@@ -8,7 +14,6 @@ const FetchData = () => {
       );
 
       const data = await response.json();
-
 
       console.log(data);
     };
