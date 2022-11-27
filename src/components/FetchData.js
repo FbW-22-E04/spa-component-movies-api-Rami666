@@ -15,6 +15,8 @@ const {state, dispatch} = useContext(MovieContext)
 
       const data = await response.json();
 
+      dispatch({type: 'SendData', payload: data.Search})
+
       console.log(data);
     };
 

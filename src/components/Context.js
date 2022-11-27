@@ -4,13 +4,16 @@ export const MovieContext = createContext();
 
 const MovieContextProvider = ({ children }) => {
   const initialState = {
-    movie: [],
+    movies: [],
+    searchItem: "",
   };
 
   const reducer = (state, action) => {
     switch (action.type) {
-      case "":
-        return;
+      case "SendData":
+
+      console.log("sss",action.payload);
+        return {...state, movies: action.payload};
 
       default:
         return;

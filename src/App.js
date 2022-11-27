@@ -6,8 +6,7 @@ import { useContext } from 'react';
 
 function App() {
 const {state, dispatch} = useContext(MovieContext)
-
-console.log(state);
+console.log('from the app file', state.movies);
 
   return (
   <div>
